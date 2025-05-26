@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>🔐 Login to Library</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: "Pixelify Sans", sans-serif;
+    }
+
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #e6e6fa, #d3cce3);
+    }
+
+    nav {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      display: flex;
+      gap: 15px;
+    }
+
+    nav a {
+      font-size: 1rem;
+      font-weight: 600;
+      color: #000;
+      text-decoration: none;
+      padding: 8px 12px;
+      border-radius: 12px;
+      background: rgba(255, 255, 255, 0.6);
+      transition: background 0.3s ease;
+    }
+
+    nav a:hover {
+      background: rgba(255, 255, 255, 0.8);
+    }
+
+    .login-card {
+      background: rgba(255, 255, 255, 0.3);
+      border-radius: 28px;
+      padding: 3rem 2.8rem;
+      width: 460px;
+      text-align: center;
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+      backdrop-filter: blur(20px);
+      border: 1.5px solid rgba(255, 255, 255, 0.35);
+    }
+
+    h2 {
+      font-size: 2rem;
+      font-weight: 600;
+      color: #333;
+    }
+
+    input {
+      width: 100%;
+      padding: 1rem;
+      margin: 0.7rem 0;
+      border: none;
+      border-radius: 14px;
+      background: rgba(255, 255, 255, 0.65);
+      font-size: 1rem;
+    }
+
+    input::placeholder {
+      color: #555;
+    }
+
+    .role-selection {
+      margin-top: 1rem;
+      width: 100%;
+      padding: 1rem;
+      border-radius: 14px;
+      border: none;
+      background: rgba(255, 255, 255, 0.7);
+      font-size: 1rem;
+    }
+
+    button {
+      width: 100%;
+      padding: 1rem;
+      border: none;
+      border-radius: 14px;
+      margin-top: 1.3rem;
+      background-color: #c5b0d7;
+      color: #000;
+      font-weight: 600;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #b49fc3;
+    }
+
+    .footer-text {
+      margin-top: 1.5rem;
+      font-size: 1rem;
+      color: #333;
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav>
+    <a href="index.html">🏡 Home</a>
+  </nav>
+
+  <div class="login-card">
+    <h2>🔐 Login to Your Library</h2>
+    <form method="POST" action="LoginServlet">
+      <input type="text" name="username" placeholder="👤 Username" required>
+      <input type="password" name="password" placeholder="🔒 Password" required>
+      <select name="role" class="role-selection">
+        <option value="user">📖 User</option>
+        <option value="admin">⚙️ Admin</option>
+      </select>
+      <button type="submit">Login 🚀</button>
+    </form>
+    <div class="footer-text">New here? <a href="signup.html">Sign up now 📚</a></div>
+  </div>
+
+</body>
+
+</html>

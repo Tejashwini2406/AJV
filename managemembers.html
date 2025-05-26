@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>👥 Manage Members - Admin</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: "Pixelify Sans", sans-serif;
+    }
+
+    body {
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background: linear-gradient(135deg, #e6e6fa, #b3d9ff, #c7f5cb);
+    }
+
+    nav {
+      width: 100%;
+      display: flex;
+      justify-content: flex-end;
+      padding: 20px;
+      gap: 15px;
+    }
+
+    nav a {
+      font-size: 1rem;
+      font-weight: 600;
+      color: #000;
+      text-decoration: none;
+      padding: 8px 12px;
+      border-radius: 12px;
+      background: rgba(255, 255, 255, 0.6);
+      transition: background 0.3s ease;
+    }
+
+    nav a:hover {
+      background: rgba(255, 255, 255, 0.8);
+    }
+
+    .member-management-container {
+      width: 80%;
+      margin-top: 30px;
+      padding: 20px;
+      background: rgba(255, 255, 255, 0.7);
+      border-radius: 16px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    }
+
+    .search-container {
+      display: flex;
+      margin-bottom: 20px;
+    }
+
+    .search-box {
+      flex: 1;
+      padding: 12px;
+      border-radius: 20px;
+      border: none;
+      background: rgba(255, 255, 255, 0.7);
+    }
+
+    .search-btn {
+      padding: 12px 20px;
+      border-radius: 20px;
+      background: #9aa6e0;
+      color: #fff;
+      cursor: pointer;
+      margin-left: 10px;
+    }
+
+    .member-form {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-bottom: 20px;
+    }
+
+    .member-form input, .member-form select {
+      padding: 10px;
+      border-radius: 10px;
+      border: none;
+      background: rgba(255, 255, 255, 0.7);
+      font-size: 1rem;
+      width: 48%;
+    }
+
+    .member-form button {
+      padding: 12px;
+      border-radius: 12px;
+      background: #27ae60;
+      color: #fff;
+      font-weight: 600;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    .member-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+
+    .member-table th, .member-table td {
+      padding: 12px;
+      text-align: left;
+      border-bottom: 1px solid #ccc;
+    }
+
+    .member-table th {
+      background: rgba(0, 0, 0, 0.1);
+    }
+
+    .action-buttons button {
+      padding: 8px;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+      margin-right: 5px;
+      transition: background 0.3s ease, transform 0.2s ease;
+    }
+
+    .action-buttons button:hover {
+      transform: scale(1.05);
+    }
+
+    .edit-btn {
+      background: #f1c40f;
+      color: #000;
+    }
+
+    .delete-btn {
+      background: #c0392b;
+      color: #fff;
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav>
+    <a href="admindash.html">⚙️ Admin Dashboard</a>
+    <a href="index.html">🚪 Logout</a>
+  </nav>
+
+  <h1>👥 Manage Members</h1>
+
+  <div class="member-management-container">
+    
+    <div class="search-container">
+      <input type="text" class="search-box" placeholder="🔎 Search members..." />
+      <button class="search-btn">Search</button>
+    </div>
+
+    <form class="member-form">
+      <input type="text" placeholder="🧑 Full Name" required>
+      <input type="text" placeholder="👤 Username" required>
+      <input type="email" placeholder="📧 Email" required>
+      <select required>
+        <option value="">⚙️ Role</option>
+        <option value="user">📖 User</option>
+        <option value="admin">⚙️ Admin</option>
+      </select>
+      <button type="submit">➕ Add Member</button>
+    </form>
+
+    <table class="member-table">
+      <thead>
+        <tr>
+          <th>Full Name</th>
+          <th>Username</th>
+          <th>Email</th>
+          <th>Role</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Tejashwini</td>
+          <td>tej_admin</td>
+          <td>tejashwini@example.com</td>
+          <td>⚙️ Admin</td>
+          <td class="action-buttons">
+            <button class="edit-btn">✏ Edit</button>
+            <button class="delete-btn">🗑 Delete</button>
+          </td>
+        </tr>
+        <tr>
+          <td>Rohan Kumar</td>
+          <td>rohan_user</td>
+          <td>rohan@example.com</td>
+          <td>📖 User</td>
+          <td class="action-buttons">
+            <button class="edit-btn">✏ Edit</button>
+            <button class="delete-btn">🗑 Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+
+</body>
+
+</html>

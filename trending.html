@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>🔥 Common Trending - Library</title>
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: "Pixelify Sans", sans-serif;
+        }
+
+        body {
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: linear-gradient(135deg, #e6e6fa, #b3d9ff, #c7f5cb);
+        }
+
+        nav {
+            width: 100%;
+            display: flex;
+            justify-content: flex-end;
+            padding: 20px;
+            gap: 15px;
+        }
+
+        nav a {
+            font-size: 1rem;
+            font-weight: 600;
+            color: #000;
+            text-decoration: none;
+            padding: 8px 12px;
+            border-radius: 12px;
+            background: rgba(255, 255, 255, 0.6);
+            transition: background 0.3s ease;
+        }
+
+        nav a:hover {
+            background: rgba(255, 255, 255, 0.8);
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-top: 20px;
+            color: #444;
+        }
+
+        .carousel-container {
+            width: 80%;
+            overflow-x: auto;
+            scroll-behavior: smooth;
+            white-space: nowrap;
+            padding-bottom: 20px;
+        }
+
+        .carousel {
+            display: flex;
+            gap: 20px;
+            padding: 10px;
+        }
+
+        .book-card,
+        .member-card {
+            min-width: 160px;
+            padding: 16px;
+            border-radius: 14px;
+            background: rgba(255, 255, 255, 0.6);
+            text-align: center;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            display: inline-block;
+        }
+
+        .book-card img {
+            width: 120px;
+            height: 160px;
+            border-radius: 8px;
+        }
+
+        .book-card h4,
+        .member-card h4 {
+            margin-top: 10px;
+            font-size: 1.1rem;
+            color: #444;
+        }
+
+        .carousel-container::-webkit-scrollbar {
+            height: 8px;
+        }
+
+        .carousel-container::-webkit-scrollbar-thumb {
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 4px;
+        }
+
+        .carousel-container::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.4);
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <a href="index.html">🏡 Home</a>
+        <a href="index.html">🚪 Logout</a>
+    </nav>
+
+    <h1>🔥Trending</h1>
+
+    <div class="section-title">📖 Most Borrowed Books</div>
+    <div class="carousel-container">
+        <div class="carousel">
+            <div class="book-card">
+                <img src="book1.jpg" alt="Book 1">
+                <h4>Java Programming Mastery</h4>
+            </div>
+            <div class="book-card">
+                <img src="book2.jpg" alt="Book 2">
+                <h4>Design Patterns in Java</h4>
+            </div>
+            <div class="book-card">
+                <img src="book3.jpg" alt="Book 3">
+                <h4>Data Structures & Algorithms</h4>
+            </div>
+        </div>
+    </div>
+
+    <div class="section-title">👥 Active Borrowers</div>
+    <div class="carousel-container">
+        <div class="carousel">
+            <div class="member-card">
+                <h4>Tejashwini</h4>
+                <p>Borrowed 15 books</p>
+            </div>
+            <div class="member-card">
+                <h4>Rohan Kumar</h4>
+                <p>Borrowed 10 books</p>
+            </div>
+            <div class="member-card">
+                <h4>Aditi Sharma</h4>
+                <p>Borrowed 8 books</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

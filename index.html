@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>📖 Library Home</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: "Pixelify Sans", sans-serif;
+    }
+
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background: linear-gradient(135deg, #e6e6fa, #b3d9ff, #c7f5cb);
+    }
+
+    nav {
+      width: 100%;
+      display: flex;
+      justify-content: flex-end;
+      padding: 20px;
+      gap: 15px;
+    }
+
+    nav a {
+      font-size: 1rem;
+      font-weight: 600;
+      color: #000;
+      text-decoration: none;
+      padding: 8px 12px;
+      border-radius: 12px;
+      background: rgba(255, 255, 255, 0.6);
+      transition: background 0.3s ease;
+    }
+
+    nav a:hover {
+      background: rgba(255, 255, 255, 0.8);
+    }
+
+    .search-container {
+      margin-top: 30px;
+      width: 60%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .search-box {
+      flex: 1;
+      padding: 12px;
+      font-size: 1rem;
+      border-radius: 20px;
+      border: none;
+      background: rgba(255, 255, 255, 0.7);
+      box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+    }
+
+    .search-btn {
+      margin-left: 10px;
+      padding: 12px 20px;
+      font-size: 1rem;
+      border-radius: 20px;
+      border: none;
+      background: #9aa6e0;
+      color: #fff;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .search-btn:hover {
+      background: #7f8dc4;
+    }
+
+    .filters-container {
+      margin-top: 15px;
+      display: flex;
+      gap: 15px;
+    }
+
+    .filter-select {
+      padding: 10px;
+      font-size: 1rem;
+      border-radius: 10px;
+      border: none;
+      background: rgba(255, 255, 255, 0.7);
+    }
+
+    .trending-label {
+      margin-top: 40px;
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: #333;
+      text-align: center;
+    }
+
+    .carousel-container {
+      width: 80%;
+      overflow-x: auto;
+      scroll-behavior: smooth;
+      white-space: nowrap;
+      padding-bottom: 20px;
+    }
+
+    .carousel {
+      display: flex;
+      gap: 20px;
+      padding: 10px;
+    }
+
+    .book-card {
+      min-width: 160px;
+      padding: 16px;
+      border-radius: 14px;
+      background: rgba(255, 255, 255, 0.6);
+      text-align: center;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+      display: inline-block;
+    }
+
+    .book-card img {
+      width: 120px;
+      height: 160px;
+      border-radius: 8px;
+    }
+
+    .book-card h4 {
+      margin-top: 10px;
+      font-size: 1.1rem;
+      color: #444;
+    }
+
+    .carousel-container::-webkit-scrollbar {
+      height: 8px;
+    }
+
+    .carousel-container::-webkit-scrollbar-thumb {
+      background: rgba(0, 0, 0, 0.3);
+      border-radius: 4px;
+    }
+
+    .carousel-container::-webkit-scrollbar-track {
+      background: rgba(255, 255, 255, 0.4);
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav>
+    <a href="home.html">🏡 Home</a>
+    <a href="login.html">🔐 Login</a>
+    <a href="signup.html">✍ Sign Up</a>
+  </nav>
+
+  <div class="search-container">
+    <input type="text" class="search-box" placeholder="🔎 Search books..." />
+    <button class="search-btn" onclick="window.location.href='search.html'">Search</button>
+  </div>
+
+  <div class="filters-container">
+    <select class="filter-select">
+      <option value="">🌟 Mood</option>
+      <option value="adventurous">Adventurous</option>
+      <option value="relaxing">Relaxing</option>
+      <option value="intense">Intense</option>
+      <option value="emotional">Emotional</option>
+    </select>
+
+    <select class="filter-select">
+      <option value="">📖 Genre</option>
+      <option value="fiction">Fiction</option>
+      <option value="nonfiction">Non-fiction</option>
+      <option value="fantasy">Fantasy</option>
+      <option value="mystery">Mystery</option>
+      <option value="sci-fi">Sci-Fi</option>
+    </select>
+  </div>
+
+  <div class="trending-label" onclick="window.location.href='trending.html'" style="cursor: pointer;">Popular</div>
+
+  <div class="carousel-container">
+    <div class="carousel">
+      <div class="book-card">
+        <img src="book1.jpg" alt="Book 1">
+        <h4>Book Title 1</h4>
+      </div>
+      <div class="book-card">
+        <img src="book2.jpg" alt="Book 2">
+        <h4>Book Title 2</h4>
+      </div>
+      <div class="book-card">
+        <img src="book3.jpg" alt="Book 3">
+        <h4>Book Title 3</h4>
+      </div>
+      <div class="book-card">
+        <img src="book4.jpg" alt="Book 4">
+        <h4>Book Title 4</h4>
+      </div>
+      <div class="book-card">
+        <img src="book5.jpg" alt="Book 5">
+        <h4>Book Title 5</h4>
+      </div>
+      <div class="book-card">
+        <img src="book6.jpg" alt="Book 6">
+        <h4>Book Title 6</h4>
+      </div>
+      <div class="book-card">
+        <img src="book7.jpg" alt="Book 7">
+        <h4>Book Title 7</h4>
+      </div>
+      <div class="book-card">
+        <img src="book8.jpg" alt="Book 8">
+        <h4>Book Title 8</h4>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>

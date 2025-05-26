@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>🔎 Common Search - Library</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: "Pixelify Sans", sans-serif;
+    }
+
+    body {
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background: linear-gradient(135deg, #e6e6fa, #b3d9ff, #c7f5cb);
+    }
+
+    nav {
+      width: 100%;
+      display: flex;
+      justify-content: flex-end;
+      padding: 20px;
+      gap: 15px;
+    }
+
+    nav a {
+      font-size: 1rem;
+      font-weight: 600;
+      color: #000;
+      text-decoration: none;
+      padding: 8px 12px;
+      border-radius: 12px;
+      background: rgba(255, 255, 255, 0.6);
+      transition: background 0.3s ease;
+    }
+
+    nav a:hover {
+      background: rgba(255, 255, 255, 0.8);
+    }
+
+    .search-container {
+      margin-top: 30px;
+      width: 60%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .search-box {
+      flex: 1;
+      padding: 12px;
+      border-radius: 20px;
+      border: none;
+      background: rgba(255, 255, 255, 0.7);
+      width: 80%;
+    }
+
+    .search-btn {
+      padding: 12px 20px;
+      border-radius: 20px;
+      background: #9aa6e0;
+      color: #fff;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    .filters-container {
+      margin-top: 15px;
+      display: flex;
+      gap: 15px;
+    }
+
+    .filter-select {
+      padding: 10px;
+      border-radius: 10px;
+      border: none;
+      background: rgba(255, 255, 255, 0.7);
+    }
+
+    .results-container {
+      width: 80%;
+      margin-top: 30px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .section-title {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-top: 20px;
+      color: #444;
+    }
+
+    .result-card {
+      width: 100%;
+      padding: 12px;
+      border-radius: 12px;
+      background: rgba(255, 255, 255, 0.7);
+      margin-top: 10px;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav>
+    <a href="index.html">🏡 Home</a>
+    <a href="index.html">🚪 Logout</a>
+  </nav>
+
+  <h1>🔎Search</h1>
+
+  <div class="search-container">
+    <input type="text" class="search-box" placeholder="Search books, members, history..." />
+    <button class="search-btn">Search</button>
+  </div>
+
+  <div class="filters-container">
+    <select class="filter-select">
+      <option value="">✍ Author</option>
+      <option value="JK Rowling">J.K. Rowling</option>
+      <option value="George Orwell">George Orwell</option>
+    </select>
+
+    <select class="filter-select">
+      <option value="">📖 Genre</option>
+      <option value="fiction">Fiction</option>
+      <option value="fantasy">Fantasy</option>
+      <option value="mystery">Mystery</option>
+    </select>
+
+    <select class="filter-select">
+      <option value="">🌟 Mood</option>
+      <option value="adventurous">Adventurous</option>
+      <option value="relaxing">Relaxing</option>
+      <option value="intense">Intense</option>
+    </select>
+  </div>
+
+  <div class="results-container">
+    <div class="section-title">📖 Books</div>
+    <div class="result-card">Java Programming Mastery (Author: John Smith | Genre: Tech | Mood: Intense)</div>
+    <div class="result-card">Data Structures & Algorithms (Author: Alice Johnson | Genre: Education | Mood: Analytical)
+    </div>
+
+    <div class="section-title">👥 Members</div>
+    <div class="result-card">Tejashwini - Admin</div>
+    <div class="result-card">Rohan Kumar - User</div>
+
+    <div class="section-title">📜 Borrowing History</div>
+    <div class="result-card">Tejashwini borrowed "Java Programming Mastery" (Due: 2025-05-25)</div>
+    <div class="result-card">Rohan Kumar borrowed "Design Patterns in Java" (Overdue - Fine: $15)</div>
+  </div>
+
+</body>
+
+</html>

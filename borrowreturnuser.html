@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>📖 Borrow & Return - Library</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: "Pixelify Sans", sans-serif;
+    }
+
+    body {
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background: linear-gradient(135deg, #e6e6fa, #b3d9ff, #c7f5cb);
+    }
+
+    nav {
+      width: 100%;
+      display: flex;
+      justify-content: flex-end;
+      padding: 20px;
+      gap: 15px;
+    }
+
+    nav a {
+      font-size: 1rem;
+      font-weight: 600;
+      color: #000;
+      text-decoration: none;
+      padding: 8px 12px;
+      border-radius: 12px;
+      background: rgba(255, 255, 255, 0.6);
+      transition: background 0.3s ease;
+    }
+
+    nav a:hover {
+      background: rgba(255, 255, 255, 0.8);
+    }
+
+    .borrow-container {
+      width: 80%;
+      margin-top: 30px;
+      padding: 20px;
+      background: rgba(255, 255, 255, 0.7);
+      border-radius: 16px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    }
+
+    .search-container {
+      display: flex;
+      margin-bottom: 20px;
+    }
+
+    .search-box {
+      flex: 1;
+      padding: 12px;
+      border-radius: 20px;
+      border: none;
+      background: rgba(255, 255, 255, 0.7);
+    }
+
+    .search-btn {
+      padding: 12px 20px;
+      border-radius: 20px;
+      background: #9aa6e0;
+      color: #fff;
+      cursor: pointer;
+      margin-left: 10px;
+    }
+
+    .borrow-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+
+    .borrow-table th, .borrow-table td {
+      padding: 12px;
+      text-align: left;
+      border-bottom: 1px solid #ccc;
+    }
+
+    .borrow-table th {
+      background: rgba(0, 0, 0, 0.1);
+    }
+
+    .action-buttons button {
+      padding: 8px;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+      margin-right: 5px;
+      transition: background 0.3s ease, transform 0.2s ease;
+    }
+
+    .action-buttons button:hover {
+      transform: scale(1.05);
+    }
+
+    .borrow-btn {
+      background: #27ae60;
+      color: #fff;
+    }
+
+    .return-btn {
+      background: #3498db;
+      color: #fff;
+    }
+
+    .fine-warning {
+      background: #c0392b;
+      color: #fff;
+      padding: 6px;
+      border-radius: 6px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav>
+    <a href="userdash.html">📚 Dashboard</a>
+    <a href="index.html">🚪 Logout</a>
+  </nav>
+
+  <h1>📖 Borrow & Return Books</h1>
+
+  <div class="borrow-container">
+    
+    <div class="search-container">
+      <input type="text" class="search-box" placeholder="🔎 Search books..." />
+      <button class="search-btn">Search</button>
+    </div>
+
+    <table class="borrow-table">
+      <thead>
+        <tr>
+          <th>Book Title</th>
+          <th>Borrow Date</th>
+          <th>Due Date</th>
+          <th>Status</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Java Programming Mastery</td>
+          <td>2025-05-10</td>
+          <td>2025-05-25</td>
+          <td><span>Borrowed</span></td>
+          <td class="action-buttons">
+            <button class="return-btn">🔄 Return</button>
+          </td>
+        </tr>
+        <tr>
+          <td>Design Patterns in Java</td>
+          <td>2025-04-15</td>
+          <td>2025-04-30</td>
+          <td><span class="fine-warning">Overdue - Fine $15</span></td>
+          <td class="action-buttons">
+            <button class="return-btn">🔄 Return</button>
+          </td>
+        </tr>
+        <tr>
+          <td>Data Structures & Algorithms</td>
+          <td>---</td>
+          <td>---</td>
+          <td><span>Available</span></td>
+          <td class="action-buttons">
+            <button class="borrow-btn">📖 Borrow</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+
+</body>
+
+</html>

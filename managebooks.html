@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>📖 Manage Books - Admin</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: "Pixelify Sans", sans-serif;
+    }
+
+    body {
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background: linear-gradient(135deg, #e6e6fa, #b3d9ff, #c7f5cb);
+    }
+
+    nav {
+      width: 100%;
+      display: flex;
+      justify-content: flex-end;
+      padding: 20px;
+      gap: 15px;
+    }
+
+    nav a {
+      font-size: 1rem;
+      font-weight: 600;
+      color: #000;
+      text-decoration: none;
+      padding: 8px 12px;
+      border-radius: 12px;
+      background: rgba(255, 255, 255, 0.6);
+      transition: background 0.3s ease;
+    }
+
+    nav a:hover {
+      background: rgba(255, 255, 255, 0.8);
+    }
+
+    h1 {
+      margin-top: 20px;
+      font-size: 2rem;
+      font-weight: 700;
+      color: #333;
+    }
+
+    .book-management-container {
+      width: 80%;
+      margin-top: 30px;
+      padding: 20px;
+      background: rgba(255, 255, 255, 0.7);
+      border-radius: 16px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    }
+
+    .search-container {
+      display: flex;
+      margin-bottom: 20px;
+    }
+
+    .search-box {
+      flex: 1;
+      padding: 12px;
+      border-radius: 20px;
+      border: none;
+      background: rgba(255, 255, 255, 0.7);
+    }
+
+    .search-btn {
+      padding: 12px 20px;
+      border-radius: 20px;
+      background: #9aa6e0;
+      color: #fff;
+      cursor: pointer;
+      margin-left: 10px;
+    }
+
+    .book-form {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-bottom: 20px;
+    }
+
+    .book-form input, .book-form select {
+      padding: 10px;
+      border-radius: 10px;
+      border: none;
+      background: rgba(255, 255, 255, 0.7);
+      font-size: 1rem;
+      width: 48%;
+    }
+
+    .book-form button {
+      padding: 12px;
+      border-radius: 12px;
+      background: #27ae60;
+      color: #fff;
+      font-weight: 600;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    .book-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+
+    .book-table th, .book-table td {
+      padding: 12px;
+      text-align: left;
+      border-bottom: 1px solid #ccc;
+    }
+
+    .book-table th {
+      background: rgba(0, 0, 0, 0.1);
+    }
+
+    .action-buttons button {
+      padding: 8px;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+      margin-right: 5px;
+    }
+
+    .edit-btn {
+      background: #f1c40f;
+      color: #000;
+    }
+
+    .delete-btn {
+      background: #c0392b;
+      color: #fff;
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav>
+    <a href="admindash.html">⚙️ Admin Dashboard</a>
+    <a href="index.html">🚪 Logout</a>
+  </nav>
+
+  <h1>📖 Manage Books</h1>
+
+  <div class="book-management-container">
+    
+    <div class="search-container">
+      <input type="text" class="search-box" placeholder="🔎 Search books..." />
+      <button class="search-btn">Search</button>
+    </div>
+
+    <form class="book-form">
+      <input type="text" placeholder="📖 Book Title" required>
+      <input type="text" placeholder="✍ Author" required>
+      <select required>
+        <option value="">📖 Genre</option>
+        <option value="fiction">Fiction</option>
+        <option value="nonfiction">Non-fiction</option>
+        <option value="fantasy">Fantasy</option>
+        <option value="mystery">Mystery</option>
+        <option value="sci-fi">Sci-Fi</option>
+      </select>
+      <select required>
+        <option value="">📌 Availability</option>
+        <option value="physical">Physical</option>
+        <option value="digital">Digital</option>
+      </select>
+      <button type="submit">➕ Add Book</button>
+    </form>
+
+    <table class="book-table">
+      <thead>
+        <tr>
+          <th>Title</th>
+          <th>Author</th>
+          <th>Genre</th>
+          <th>Availability</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Book Title 1</td>
+          <td>Author 1</td>
+          <td>Fiction</td>
+          <td>📖 Physical</td>
+          <td class="action-buttons">
+            <button class="edit-btn">✏ Edit</button>
+            <button class="delete-btn">🗑 Delete</button>
+          </td>
+        </tr>
+        <tr>
+          <td>Book Title 2</td>
+          <td>Author 2</td>
+          <td>Mystery</td>
+          <td>📥 Digital</td>
+          <td class="action-buttons">
+            <button class="edit-btn">✏ Edit</button>
+            <button class="delete-btn">🗑 Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+
+</body>
+
+</html>
